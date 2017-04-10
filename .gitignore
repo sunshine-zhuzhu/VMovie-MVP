@@ -8,5 +8,5 @@
 /captures
 .externalNativeBuild
 /*/*/androidTest
-/*/test
+/*/*/test
 .idea
