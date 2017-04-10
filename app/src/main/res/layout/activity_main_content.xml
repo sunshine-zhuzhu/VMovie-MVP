@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+
+        android:id="@+id/activity_main_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorBack">
+        <!--
+                左边菜单按钮，右边搜索按钮，中间标题
+        -->
+
+        <ImageView
+            android:id="@+id/activity_main_open_side"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:src="@mipmap/home_side" />
+
+
+        <ImageView
+            android:id="@+id/activity_main_search"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/home_search" />
+
+        <TextView
+            android:id="@+id/activity_main_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="幕后"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:visibility="gone"
+
+            />
+
+        <FrameLayout
+            android:layout_centerInParent="true"
+            android:id="@+id/activity_main_home_title"
+            android:layout_width="160dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/activity_main_home_title_movie_list"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="最新"
+                android:textSize="15sp"
+                android:textColor="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/activity_main_home_title_channel_list"
+                android:layout_width="80dp"
+                android:textSize="15sp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="频道"
+                android:layout_marginLeft="80dp"
+                android:textColor="@color/colorGray6"
+                />
+
+            <View
+                android:layout_gravity="bottom"
+                android:background="#ffffffff"
+                android:layout_width="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="3dp"
+                android:id="@+id/activity_main_home_indicator"
+
+                />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/activity_main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<android.support.v4.widget.DrawerLayout-->
+        <!--android:background="@color/colorWhite"-->
+        <!--android:id="@+id/side_drawer"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/slide_bg"
+        android:clickable="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <ImageView
+            android:id="@+id/activity_main_cover_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="45dp"
+            android:layout_marginRight="45dp"
+            android:src="@mipmap/side_close" />
+
+        <RelativeLayout
+            android:id="@+id/activity_main_cover_info"
+            android:layout_width="match_parent"
+            android:layout_height="180dp">
+
+            <TextView
+                android:id="@+id/activity_main_cover_click_to_login_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:text="点击登录"
+                android:textColor="@color/colorGray9"
+                android:textSize="20sp" />
+            <ImageView
+                android:id="@+id/activity_main_cover_click_to_login"
+                android:src="@mipmap/default_avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignLeft="@+id/activity_main_cover_click_to_login_text"
+                android:layout_alignStart="@+id/activity_main_cover_click_to_login_text" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30dp"
+                android:layout_toLeftOf="@id/activity_main_cover_click_to_login"
+                android:src="@mipmap/side_set"
+                android:id="@+id/imageView2" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@id/activity_main_cover_click_to_login"
+                android:src="@mipmap/side_message"
+                android:id="@+id/imageView3" />
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_main_cover_likes_and_cache"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/activity_main_cover_info"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/side_cache"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:text="我的缓存"
+                android:textColor="@color/colorGray9" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/home_like"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:text="我喜欢的"
+                android:textColor="@color/colorGray9" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/activity_main_cover_rg"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/activity_main_cover_likes_and_cache"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/activity_main_cover_rg_home"
+                style="@style/activity_main_cover_rg_button_style"
+                android:drawableLeft="@drawable/home_selector"
+                android:text="@string/activity_main_cover_rg_home" />
+
+            <RadioButton
+                android:id="@+id/activity_main_cover_rg_series"
+                style="@style/activity_main_cover_rg_button_style"
+                android:drawableLeft="@drawable/series_selector"
+                android:text="@string/activity_main_cover_rg_series" />
+
+            <RadioButton
+                android:id="@+id/activity_main_cover_rg_behind"
+                style="@style/activity_main_cover_rg_button_style"
+                android:drawableLeft="@drawable/behind_selector"
+                android:text="@string/activity_main_cover_rg_behind" />
+
+
+        </RadioGroup>
+    </RelativeLayout>
+
+    <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<FrameLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="250dp"-->
+                <!--android:background="@mipmap/login_bg">-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/side_drawer_close"-->
+                    <!--android:layout_width="50dp"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:scaleType="fitCenter"-->
+                    <!--android:src="@mipmap/ali_feedback_icon_back_white" />-->
+            <!--</FrameLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginLeft="60dp"-->
+                <!--android:layout_marginRight="60dp"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<EditText-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:layout_margin="10dp"-->
+                    <!--android:hint="邮箱"-->
+                    <!--android:id="@+id/editText" />-->
+
+                <!--<EditText-->
+                    <!--android:layout_width="match_parent"-->
+
+                    <!--android:layout_height="30dp"-->
+                    <!--android:layout_margin="10dp"-->
+                    <!--android:hint="密码" />-->
+
+                <!--<Button-->
+                    <!--android:layout_width="140dp"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:layout_marginTop="40dp"-->
+                    <!--android:id="@+id/login" />-->
+
+                <!--<TextView-->
+                    <!--android:gravity="center"-->
+                    <!--android:layout_marginTop="40dp"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="使用社交平台登陆/注册"-->
+                    <!--android:textSize="12sp"-->
+                    <!--/>-->
+                <!--<LinearLayout-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent">-->
+                    <!--<ImageView-->
+                        <!--android:id="@+id/login_vblog"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_marginLeft="15dp"-->
+                        <!--android:layout_width="30dp"-->
+                        <!--android:layout_height="30dp" />-->
+                    <!--<ImageView-->
+                        <!--android:id="@+id/login_qq"-->
+                        <!--android:layout_marginLeft="40dp"-->
+                        <!--android:layout_marginRight="40dp"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_width="30dp"-->
+                        <!--android:layout_height="30dp" />-->
+                    <!--<ImageView-->
+                        <!--android:id="@+id/login_weChat"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_width="30dp"-->
+                        <!--android:layout_height="30dp" />-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+        <!--</LinearLayout>-->
+
+</RelativeLayout>
