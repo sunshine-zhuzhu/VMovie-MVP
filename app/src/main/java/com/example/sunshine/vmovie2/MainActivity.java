@@ -18,6 +18,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.example.sunshine.vmovie2.ui.home.HomeFragment;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -224,7 +226,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onCheckedChanged(RadioGroup group, int checkedId) {
         switch (checkedId) {
             case R.id.activity_main_cover_rg_home:
-//                switchPage(HomeFragment.TAG);
+                switchPage(HomeFragment.TAG);
                 mTitle.setVisibility(View.GONE);
                 mHomeTitle.setVisibility(View.VISIBLE);
                 break;
@@ -327,8 +329,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * 在Fragment中调用此方法，设置Indicator的位置
      * offset ： 0-1
      */
+    private int width;
     public void moveTitleIndicator(float offset) {
-        int width = mHomeTitle.getWidth();
+        if (width==0)
+        width = mHomeTitle.getWidth();
         mIndicator.setTranslationX(offset * width / 2);
 
     }
