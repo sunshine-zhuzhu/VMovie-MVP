@@ -6,10 +6,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import com.example.mvplibrary.base.BaseFragment;
 import com.example.sunshine.vmovie2.MainActivity;
 import com.example.sunshine.vmovie2.R;
@@ -25,16 +21,14 @@ import butterknife.BindView;
  * A simple {@link Fragment} subclass.
  */
 public class HomeFragment extends BaseFragment implements MainActivity.OnTitleClickListener, ViewPager.OnPageChangeListener {
+
     public static final String TAG = HomeFragment.class.getSimpleName();
 
     @BindView(R2.id.fragment_home_viewPager)
     ViewPager mViewPager;
     private MainActivity mMainActivity;
 
-    @Override
-    public int getLayoutId() {
-        return R.layout.fragment_home;
-    }
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -45,10 +39,16 @@ public class HomeFragment extends BaseFragment implements MainActivity.OnTitleCl
         }
     }
 
+    @Override
+    public int getLayoutId() {
+        return R.layout.fragment_home;
+    }
+
 
 
     @Override
     public void initView() {
+        Log.e(TAG, "initView: getFragments-->" );
         HomeFragmentPagerAdapter adapter = new HomeFragmentPagerAdapter(getChildFragmentManager(), getFragments());
         mViewPager.setAdapter(adapter);
         mViewPager.addOnPageChangeListener(this);
@@ -72,6 +72,7 @@ public class HomeFragment extends BaseFragment implements MainActivity.OnTitleCl
 
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+        Log.e(TAG, "onPageScrolled: " );
         if (mMainActivity != null) {
             mMainActivity.moveTitleIndicator(position + positionOffset);
         }
